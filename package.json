@@ -3,7 +3,7 @@
     "start": "concurrently \"npm run server\" \"npm run client\"",
     "server": "node server.js",
     "client": "cd hecho.por.jenny && npm start",
-    "deploy": "cd hecho.por.jenny && npm install && npm run build"
+    "deploy": "npm install && cd hecho.por.jenny && npm run build"
   },
   "dependencies": {
     "cors": "^2.8.5",
