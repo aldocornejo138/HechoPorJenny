@@ -1,7 +1,16 @@
 {
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "node server.js",
+    "client": "cd hecho.por.jenny && npm start",
+    "build": "cd hecho.por.jenny && npm run build"
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "stripe": "^14.8.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
   }
 }
