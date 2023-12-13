@@ -1,0 +1,495 @@
+.main {
+  background-color: #000000;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.head {
+  background-color: #000000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  width: 100%;
+  height: 50px;
+  left: 50%;
+  zoom: 120%;
+  overflow-x: hidden;
+}
+
+.headLogo {
+  color: #ffd9fa;
+  font-size: 2rem;
+  cursor: pointer;
+  border-color: #ffd9fa;
+  margin-top: 0px;
+}
+.headNumber {
+  color: #fefcfe;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 0px;
+  margin-right: 55px;
+}
+.transparent-background {
+  width: 100%;
+  height: 15%;
+  position: absolute;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to top, rgba(255, 0, 0, 0), rgb(4, 3, 3));
+}
+
+/* Base styles for larger screens */
+.background-Main {
+  height: auto;
+  background-color: #000000;
+  overflow-x: hidden;
+}
+.navbarItems {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  z-index: 99;
+  margin-top: 0px;
+  position: absolute;
+}
+
+.countinerStyle {
+  height: 50vh;
+  position: relative;
+}
+
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+  object-position: center; /* Center the video vertically */
+}
+.navbarLogo {
+  font-size: #ffd9fa;
+  cursor: pointer;
+  padding-right: 0px;
+  z-index: -1;
+}
+
+.navbarLogo img {
+  height: 25%;
+  width: 25%;
+  margin-left: -225px;
+  z-index: -1;
+  margin-top: 25px;
+}
+
+.navMenu {
+  text-decoration: none;
+  display: grid;
+  grid-gap: 0px;
+  list-style: none;
+  align-items: center;
+  color: #ffd9fa;
+}
+
+.navMenu:hover {
+  border-radius: 25px;
+  color: #e266d1;
+}
+
+.navLinks {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 0rem 0rem;
+  white-space: nowrap;
+  cursor: pointer;
+  z-index: 9;
+  margin-right: 100px;
+}
+
+.navLinks h1 {
+  color: #ffd9fa;
+  text-shadow: 1px 1px 1px #c471c4, -1px -1px 1px rgb(179, 93, 172);
+}
+
+.Title {
+  font-size: 2rem;
+  color: #ffd9fa;
+  padding-top: 20px;
+  padding-right: 50px;
+  padding-left: 50px;
+  background-color: #2d2d2f;
+  padding-bottom: 20px;
+  border-color: rgb(0, 0, 0);
+  margin-top: 77px;
+  border: 4px solid #ffd9fa;
+  border-radius: 25px;
+  box-shadow: 1px 1px 5px #ca66bd, -1px -1px 5px #ca66bd;
+}
+
+.Title p {
+  color: #ffff;
+}
+
+.imageContainer {
+  color: white;
+  flex: 1;
+  padding: 20px;
+  margin-left: 40px;
+  border-radius: 25px;
+}
+
+.imageContainer p {
+  font-size: 20px;
+}
+.FancyTitle {
+  text-align: center;
+  position: fixed;
+  left: 40%;
+  font-family: cursive;
+  font-size: 2rem;
+  color: #ffffff;
+  z-index: 10;
+  margin-top: -85px;
+}
+
+.svgLineContainer {
+  width: 100%; /* Adjust the width as needed */
+  height: auto; /* Allow the SVG to scale proportionally based on the container width */
+  position: relative;
+  top: 42%; /* Position the SVG line vertically in the middle */
+  left: 47%; /* Position the SVG line horizontally in the middle */
+  transform: translate(-50%, -50%); /* Center the SVG line */
+  margin-top: 80px;
+}
+
+.svgFlower {
+  display: flex;
+  flex-direction: column;
+  width: 60%; /* Adjust the width as needed */
+  height: auto; /* Allow the SVG to scale proportionally based on the container width */
+  position: relative;
+  stroke: rgba(251, 0, 255, 0.427);
+  left: 69.5%; /* Position the SVG line horizontally in the middle */
+  transform: translate(-50%, -50%); /* Center the SVG line */
+  margin-top: -50px;
+}
+
+.Footer {
+  bottom: 0px;
+  left: 0%;
+  z-index: 9;
+  position: fixed;
+  width: 100%;
+  font-size: 7px;
+  border-top: 1px solid #ffffff84; /* Line dividing the top of the section */
+  color: #fff;
+  padding-top: -10px;
+  background-color: #000000; /* Text color for the footer content */
+}
+.fancyContainer {
+  margin-bottom: 50px;
+}
+
+.zoomIn {
+  transform: translateY(0) scale(1);
+  animation: zoomIn 2.5s ease-in-out;
+  opacity: 1;
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: translateY(1%) scale(0.95);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+.zoomOut {
+  transform: translateY(1%) scale(0.95);
+  animation: zoomOut 3s ease-in-out;
+  opacity: 0;
+}
+
+@keyframes zoomOut {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(1%) scale(0.95);
+    opacity: 0;
+  }
+}
+
+.cartZoomIn {
+  transform: translateY(0) scale(1);
+  animation: zoomIn 1s ease-in-out;
+  opacity: 1;
+}
+
+@keyframes cartZoomIn {
+  0% {
+    transform: translateY(1%) scale(0.95);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+.cartZoomOut {
+  transform: translateY(1%) scale(0.95);
+  animation: zoomOut 1s ease-in-out;
+  opacity: 0;
+}
+
+@keyframes cartZoomOut {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(1%) scale(0.95);
+    opacity: 0;
+  }
+}
+
+.cartButton {
+  position: fixed;
+  top: 50px; /* Adjust this value based on the height of your SVG lines */
+  left: 85%;
+  margin-bottom: 0px;
+  margin-top: -50px;
+  z-index: 9999;
+  opacity: 1;
+}
+
+.cartButton button {
+  background-color: #f988ea; /* Pink color */
+  color: rgb(255, 255, 255); /* White text color */
+  border: none;
+  border-radius: 20px; /* Round corners */
+  padding: 10px 15px; /* Adjust padding as needed */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 15px;
+  margin-right: -55px;
+  opacity: 1;
+}
+
+/* Add styles for the button in the fixed state */
+.cartButton.fixed button {
+  position: fixed;
+  top: 20px;
+  left: 75%;
+  margin-left: 0px;
+  margin-top: 0px;
+  width: 120px;
+  font-size: 15px;
+  opacity: 1;
+}
+
+.cartButton.unfixed button {
+  position: fixed;
+  top: 20px;
+  left: 75%;
+  margin-left: -30px;
+  margin-top: 0px;
+  width: 120px;
+  font-size: 15px;
+  opacity: 0;
+}
+
+/* Adjust background color on hover */
+.cartButton.fixed button:hover {
+  background-color: #ff4784; /* Slightly different shade of pink on hover */
+}
+
+.cartButton button:hover {
+  background-color: #f92d71;
+}
+
+/* Add this to your CSS file */
+.cartButtonAnimated {
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25%,
+  75% {
+    transform: translateX(-1px); /* Adjust the distance of the shake */
+  }
+  50% {
+    transform: translateX(1px);
+  }
+}
+/* Add media query for smaller screens */
+@media only screen and (max-width: 858px) {
+  .head {
+    padding: 0px 25px; /* Adjust padding for even smaller screens */
+  }
+
+  .headLogo {
+    font-size: 1rem;
+  }
+  .headNumber {
+    font-size: 1.1rem;
+    margin-left: 0px;
+  }
+  .navbarItems {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    z-index: 99;
+    margin-top: 0px;
+    position: absolute;
+  }
+  .navbarLogo {
+    font-size: 2rem;
+  }
+
+  .navbarLogo img {
+    height: 45%;
+    width: 45%;
+    margin-left: -80px;
+  }
+
+  .navMenu {
+    grid-template-columns: repeat(1, auto);
+  }
+
+  .navLinks {
+    font-size: 2rem;
+    margin-right: 25px;
+  }
+
+  .Title {
+    font-size: 1.2rem;
+    color: #ffd9fa;
+    padding-top: 5px;
+    padding-left: 0px;
+    padding-right: 0px;
+    background-color: #2d2d2f;
+    padding-bottom: 5px;
+    border-color: rgb(0, 0, 0);
+    margin-top: 20px;
+    border: 4px solid #ffd9fa;
+    border-radius: 25px;
+  }
+  .imageContainer {
+    margin-left: 0;
+    font-size: 15px;
+    margin-bottom: 25px;
+  }
+  .FancyTitle {
+    text-align: center;
+    top: -90%;
+    left: 0%;
+    font-family: cursive; /* Use cursive font-family */
+    font-size: 1.55rem;
+    width: 400px; /* Adjust the font size as needed */
+    color: #ffffff; /* Text color */
+    margin-top: -10px;
+  }
+
+  .svgLineContainer {
+    width: 90%; /* Adjust the width as needed */
+    height: auto; /* Allow the SVG to scale proportionally based on the container width */
+    position: relative;
+    top: 22%; /* Position the SVG line vertically in the middle */
+    left: 47%; /* Position the SVG line horizontally in the middle */
+    transform: translate(-50%, -50%); /* Center the SVG line */
+    margin-top: 65px;
+  }
+
+  .svgFlower {
+    display: flex;
+    flex-direction: column;
+    width: 60%; /* Adjust the width as needed */
+    height: auto; /* Allow the SVG to scale proportionally based on the container width */
+    position: relative;
+    stroke: rgba(251, 0, 255, 0.427);
+    top: 50%; /* Position the SVG line vertically in the middle */
+    left: 69.5%; /* Position the SVG line horizontally in the middle */
+    transform: translate(-50%, -50%); /* Center the SVG line */
+    margin-top: -60px;
+    padding-right: 255px;
+  }
+
+  .Footer {
+    bottom: 0px;
+    left: 0%;
+    z-index: 9;
+    width: 100%;
+    font-size: 7px;
+    border-top: 1px solid #ffffff84; /* Line dividing the top of the section */
+    color: #fff;
+    padding-top: -10px;
+    background-color: #000000; /* Text color for the footer content */
+  }
+
+  .cartButton {
+    position: fixed;
+    top: 50px; /* Adjust this value based on the height of your SVG lines */
+    left: 85%;
+    margin-bottom: 0px;
+    margin-top: -50px;
+    z-index: 9999;
+    opacity: 1;
+  }
+
+  .cartButton button {
+    background-color: #f988ea; /* Pink color */
+    color: rgb(255, 255, 255); /* White text color */
+    border: none;
+    border-radius: 20px; /* Round corners */
+    padding: 10px 15px; /* Adjust padding as needed */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 15px;
+    opacity: 1;
+  }
+
+  /* Add styles for the button in the fixed state */
+  .cartButton.fixed button {
+    position: fixed;
+    top: 20px;
+    left: 75%;
+    margin-left: -70px;
+    margin-top: 0px;
+    width: 120px;
+    font-size: 15px;
+    opacity: 1;
+  }
+
+  .cartButton.unfixed button {
+    position: fixed;
+    top: 20px;
+    left: 75%;
+    margin-left: -30px;
+    margin-top: 0px;
+    width: 120px;
+    font-size: 15px;
+    opacity: 0;
+  }
+}

@@ -1,0 +1,170 @@
+/* CartModal.css */
+.cart-modal {
+  background-color: rgb(127, 101, 132);
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  padding: 10px;
+  width: 500px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  box-shadow: 5px 5px 10px #ffd9fa, -5px -5px 10px #ffd9fa;
+  max-height: 70vh; /* Set a maximum height, adjust as needed */
+  overflow-y: auto; /* Enable vertical scrolling if needed */
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-btn {
+  background-color: #f988ea;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+  width: auto;
+  max-width: 100%; /* Ensure items don't exceed the modal width */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.item-info {
+  flex-grow: 1;
+}
+
+.item-title {
+  margin: 0;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.item-price {
+  margin: 0;
+  color: rgb(0, 255, 94);
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.item-actions {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-btn {
+  background-color: #f988ea;
+  color: #fff;
+  border: none;
+  border-radius: 20%;
+  padding: 10px;
+  cursor: pointer;
+  margin: 0 40px;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.quantity {
+  margin: 0 5px;
+  font-size: 16px;
+}
+
+.delete-btn {
+  background-color: #ff3b3b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-right: 2px;
+}
+
+.total-price p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.checkout-btn-container {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.checkout-btn {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.miniature-image {
+  width: 150px; /* Adjust the width as needed */
+  height: 150px; /* Adjust the height as needed */
+  margin-right: 10px;
+  border-radius: 15px;
+  box-shadow: 2px 2px 5px #ffd9fa, -2px -2px 5px #ffd9fa;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+/* Overlay.css */
+
+.overlayBackground {
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  z-index: 998;
+  transition: background-color 2s ease-in-out;
+}
+
+.overlayContainer {
+  background-color: rgba(255, 255, 255, 0);
+  position: fixed;
+  top: 50%; /* Center the overlay vertically */
+  left: 50%; /* Center the overlay horizontally */
+  transform: translate(-50%, -50%); /* Center the overlay */
+  z-index: 999;
+  padding: 30px;
+  width: 500px;
+  height: fit-content;
+  text-align: center;
+  border-radius: 50px;
+  transition: background-color 0.3s ease-in-out, transform 0.5s ease-in-out;
+  opacity: 0; /* Initially set the opacity to 0 to create a fade-in effect */
+  transition-delay: 0.1s; /* Add a delay to the transition */
+  text-align: center;
+}
+
+.overlayContainer.show {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+@media only screen and (max-width: 858px) {
+  .cart-modal {
+    width: 350px;
+  }
+}

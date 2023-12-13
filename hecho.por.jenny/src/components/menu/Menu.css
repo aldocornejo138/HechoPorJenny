@@ -1,0 +1,69 @@
+/* Menu.css */
+.menu-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(157, 117, 160, 0.122);
+  border: 1px solid black;
+  padding: 20px;
+  text-align: center;
+  border-radius: 20px;
+  border: 20px;
+  z-index: 10;
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Display menu options in a row by default */
+  flex-direction: row; /* Display menu options in a row by default */
+  flex-wrap: wrap; /* Allow multiple rows for smaller screens */
+  justify-content: center;
+  width: 965px; /* Center the items horizontally */
+}
+
+.menu-list li {
+  margin-right: 30px; /* Add spacing between menu options in a row */
+  margin-bottom: 15px; /* Add spacing between rows */
+}
+
+.menu-list a {
+  text-decoration: none;
+  color: white;
+  font-family: cursive;
+  font-size: 30px;
+  display: block;
+  transition: color 0.3s;
+}
+
+.menu-list a:hover {
+  color: #d400ff; /* Change text color on hover (pinkish color) */
+  cursor: pointer;
+  font-size: 35px;
+  transition: font-size 0.5s;
+}
+
+/* Media query for screens with a maximum width of 850px */
+@media screen and (max-width: 900px) {
+  .menu-container {
+    margin-top: -20px;
+  }
+  .menu-list {
+    flex-direction: column; /* Display menu options in a column for smaller screens */
+    margin-right: 0; /* Remove margin between items in a column */
+    text-align: center;
+    width: 300px; /* Center items in a column */
+  }
+
+  .menu-list li {
+    margin-right: 0; /* Remove margin between items in a column */
+    margin-bottom: 30px;
+    margin-top: 15px; /* Add spacing between rows in a column */
+  }
+
+  .menu-list a {
+    font-size: 30px;
+  }
+}

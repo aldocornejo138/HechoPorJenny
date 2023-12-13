@@ -1,0 +1,35 @@
+.success-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #000; /* Set background color to black */
+}
+
+.success-content {
+  text-align: center;
+  padding: 20px;
+  background-color: rgb(210, 158, 220);
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px #ffd9fa, -5px -5px 10px #ffd9fa;
+  color: #000; /* Set text color to black */
+}
+
+.flower-image {
+  width: 300px;
+  height: auto;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+
+.back-to-home-btn {
+  background-color: #8e6789; /* Pink color */
+  color: rgb(255, 255, 255); /* White text color */
+  border: none;
+  border-radius: 20px; /* Round corners */
+  padding: 10px 15px; /* Adjust padding as needed */
+  cursor: pointer;
+  font-size: 25px;
+  opacity: 1;
+  text-decoration: none;
+}

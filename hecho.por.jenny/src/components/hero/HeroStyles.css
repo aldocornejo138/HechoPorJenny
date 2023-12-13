@@ -1,0 +1,233 @@
+@import "~font-awesome/css/font-awesome.min.css";
+
+.backgroundMain {
+  text-align: center;
+  height: 100vh;
+  background-color: #000000;
+}
+
+.countiner-style {
+  height: 100vh;
+  position: relative;
+}
+
+.transparent-background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.035),
+    rgba(160, 124, 159, 0.535)
+  );
+}
+
+/* Add this CSS class for the filter effect */
+.image-filter {
+  filter: brightness(0.7); /* You can adjust the brightness value as needed */
+}
+/* Add this CSS class for the pinkish filter effect */
+.image-filter-pinkish {
+  filter: brightness(1); /* Adjust values as needed */
+}
+
+.hero {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* Styles for the title */
+.title {
+  text-align: center;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: cursive;
+  font-size: 2rem;
+  color: #ffffff;
+  z-index: 99999;
+}
+
+/* ... Existing CSS rules ... */
+
+/* CSS for styling the SVG path and container */
+.svg-line-container {
+  width: 90%; /* Adjust the width as needed */
+  height: auto; /* Allow the SVG to scale proportionally based on the container width */
+  position: absolute;
+  top: 22%; /* Position the SVG line vertically in the middle */
+  left: 47%; /* Position the SVG line horizontally in the middle */
+  transform: translate(-50%, -50%); /* Center the SVG line */
+}
+
+.svg-flower {
+  display: flex;
+  flex-direction: column;
+  width: 60%; /* Adjust the width as needed */
+  height: auto; /* Allow the SVG to scale proportionally based on the container width */
+  position: absolute;
+  stroke: rgba(251, 0, 255, 0.427);
+  top: 24%; /* Position the SVG line vertically in the middle */
+  left: 69.5%; /* Position the SVG line horizontally in the middle */
+  transform: translate(-50%, -50%); /* Center the SVG line */
+}
+
+.cursive-text {
+  font-family: cursive;
+  font-size: 4rem;
+  fill: transparent;
+  stroke: rgba(251, 0, 255, 0.427);
+  stroke-width: 2;
+  animation: draw 16s linear infinite;
+}
+
+@keyframes draw {
+  0% {
+    stroke-dasharray: 0 400;
+    stroke-dashoffset: 400;
+  }
+  100% {
+    stroke-dasharray: 400 0;
+    stroke-dashoffset: 0;
+  }
+}
+
+.semi-title {
+  text-align: center;
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: cursive; /* Use cursive font-family */
+  font-size: 1rem; /* Adjust the font size as needed */
+  color: #ffffff;
+  z-index: 10;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center; /* Horizontally center the icons */
+  align-items: center; /* Vertically center the icons */
+  bottom: 200px;
+  z-index: 10;
+  position: absolute;
+  width: 100%; /* Make it span the full width */
+}
+.icon {
+  font-size: 50px;
+  margin: 0 10px;
+  color: rgb(255, 255, 255); /* Set icon color to white */
+}
+
+.icon:hover {
+  color: #d400ff;
+  cursor: pointer;
+  font-size: 55px;
+}
+
+.creator a {
+  text-decoration: none;
+  color: #ff00f2b0;
+}
+
+/* Footer.css */
+
+.footer {
+  bottom: 0px;
+  left: 0%;
+  z-index: 9;
+  position: absolute;
+  width: 100%;
+  font-size: 7px;
+  border-top: 1px solid #ffffff84; /* Line dividing the top of the section */
+  color: #fff;
+  padding-top: -10px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-content {
+  flex: 2; /* Occupy 50% of the available space */
+  text-align: left;
+  padding-left: 35px;
+}
+
+.right-content {
+  flex: 1; /* Occupy 50% of the available space */
+  text-align: right;
+  padding-right: 40px;
+}
+
+.right-content a {
+  text-decoration: none;
+  color: rgba(225, 40, 216, 0.628);
+  font-size: 10px;
+  font-family: cursive;
+}
+
+.right-content a:hover {
+  font-size: 11px;
+  color: rgb(255, 0, 255);
+}
+
+@media screen and (max-width: 850px) {
+  .title {
+    text-align: center;
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: cursive; /* Use cursive font-family */
+    font-size: 1.55rem;
+    width: 400px; /* Adjust the font size as needed */
+    color: #ffffff; /* Text color */
+  }
+  .semi-title {
+    top: 18%;
+    width: 400px;
+    font-size: 17px;
+  }
+
+  .icon {
+    font-size: 45px;
+  }
+  .social-icons {
+    bottom: 150px;
+  }
+
+  .svg-line-container {
+    top: 10%;
+    left: 53%;
+  }
+  .cursive-text {
+    font-size: 50px;
+  }
+  .svg-flower {
+    top: 13%; /* Position the SVG line vertically in the middle */
+    left: 38%; /* Position the SVG line horizontally in the middle */
+    width: 60%;
+  }
+
+  .left-content {
+    padding-left: 30px;
+  }
+
+  .right-content {
+    padding-right: 35px;
+  }
+}
