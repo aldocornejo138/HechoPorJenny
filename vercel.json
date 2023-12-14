@@ -1,9 +1,6 @@
 {
   "version": 2,
-  "builds": [
-    { "src": "hecho.por.jenny/build/static/**", "use": "@now/static" },
-    { "src": "hecho.por.jenny/build/**", "use": "@now/static-build" }
-  ],
+
   "routes": [
     {
       "src": "/(?!hecho.por.jenny/)",
