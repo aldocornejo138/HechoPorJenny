@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "hecho.por.jenny/build/static/**", "use": "@now/static" },
+    { "src": "hecho.por.jenny/build/**", "use": "@now/static-build" }
+  ],
+  "routes": [
+    {
+      "src": "/(?!hecho.por.jenny/)",
+      "headers": { "cache-control": "public, max-age=31536000, immutable" },
+      "continue": true
+    },
+    { "handle": "filesystem" },
+    { "src": "/.*", "dest": "/hecho.por.jenny/index.html" }
+  ]
+}
